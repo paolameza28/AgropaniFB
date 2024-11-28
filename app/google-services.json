@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "943804099227",
+    "project_id": "agropani-44469",
+    "storage_bucket": "agropani-44469.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943804099227:android:343cc05890c2f4978d743e",
+        "android_client_info": {
+          "package_name": "com.example.agropanifb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnCspKZsmYdL40fnjIUsktxe-FknDJmjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
