@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuTrabajador">
+
+    <!-- Botón centrado en la pantalla -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnregistrarempleado"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="Registrar Empleados"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:cornerRadius="16dp"
+        app:backgroundTint="@color/green"
+        android:layout_centerInParent="true" />
+
+    <!-- Barra de navegación al fondo -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_menu"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
