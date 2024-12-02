@@ -2,6 +2,7 @@ package com.example.agropanifb
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,8 +19,24 @@ class MenuTrabajador : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        // Configurar el botón para redirigir a la actividad Registrar trabajador
+        val btnRegistrarEmpleado: Button = findViewById(R.id.btnregistrarempleado)
+        btnRegistrarEmpleado.setOnClickListener {
+            val intent = Intent(this, RegistroTrabajador ::class.java)
+            startActivity(intent)
+        }
+        // Configurar el botón para redirigir a la actividad Ver trabajador
+        val btnVerTrabajador: Button = findViewById(R.id.btnverempleados)
+        btnVerTrabajador.setOnClickListener {
+            val intent = Intent(this, VerTrabajador ::class.java)
+            startActivity(intent)
+        }
+
         // Configurar el BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+
+
+
 
         // Manejar clics en los ítems del menú
         bottomNavigationView.setOnItemSelectedListener { item ->
