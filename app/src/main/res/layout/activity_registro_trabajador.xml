@@ -7,6 +7,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegistroTrabajador">
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logoagropani"
+        android:contentDescription="Logotipo de la aplicación"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
@@ -81,20 +91,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guardar Trabajador"
+        android:backgroundTint="@color/green"
         android:id="@+id/btnGuardarTrabajador"
         app:layout_constraintTop_toBottomOf="@id/tilEdadTrabajador"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="50dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ver Trabajador"
-        android:id="@+id/btnVerTrabajador"
-        app:layout_constraintTop_toBottomOf="@id/btnGuardarTrabajador"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"/>
+    
 
 </androidx.constraintlayout.widget.ConstraintLayout>
