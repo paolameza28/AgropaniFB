@@ -41,7 +41,6 @@ class Menu : AppCompatActivity() {
             }
 
 
-
         } catch (e: Exception) {
             // Manejar la excepción
             e.printStackTrace() // Imprimir el stack trace en caso de error

@@ -1,5 +1,6 @@
 package com.example.agropanifb
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -32,16 +33,16 @@ class RegistroTrabajador : AppCompatActivity() {
         }
 
         //Iniciar la base de datos
-        database = FirebaseDatabase.getInstance().getReference("Trabajadores")
+        database = FirebaseDatabase.getInstance().getReference("Trabajador")
 
 
-        binding.btnGuardar.setOnClickListener{
+        binding.btnGuardarTrabajador.setOnClickListener{
             //Obtener los datos
             val nombre = binding.etNombreTrabajador.text.toString()
             val apellido = binding.etApellidoTrabajador.text.toString()
             val edad = binding.etEdadTrabajador.text.toString()
             //Generar el id random
-            val id = database.child("Trabajadores").push().key
+            val id = database.child("Trabajador").push().key
 
             if (nombre.isEmpty()){
                 binding.etNombreTrabajador.error = "Porfavor, ingrese un nombre"
@@ -63,6 +64,10 @@ class RegistroTrabajador : AppCompatActivity() {
                 binding.etApellidoTrabajador.setText("")
                 binding.etEdadTrabajador.setText("")
                 Snackbar.make(binding.root, "Trabajador Agregado", Snackbar.LENGTH_LONG).show()
+            }
+            binding.btnVerTrabajador.setOnClickListener{
+                val intent = Intent(this,VerTrabajador::class.java)
+                startActivity(intent)
             }
 
         }

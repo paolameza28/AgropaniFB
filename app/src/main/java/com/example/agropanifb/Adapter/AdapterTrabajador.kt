@@ -31,6 +31,8 @@ class AdapterTrabajador(private var trabajador: ArrayList <Trabajador>):
         holder.apellido.text = trabajador.apellido
         holder.edad.text = trabajador.edad
 
+
+
     }
 
     override fun getItemCount(): Int {

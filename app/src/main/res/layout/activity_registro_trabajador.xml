@@ -81,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guardar Trabajador"
-        android:id="@+id/btnGuardar"
+        android:id="@+id/btnGuardarTrabajador"
         app:layout_constraintTop_toBottomOf="@id/tilEdadTrabajador"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +92,7 @@
         android:layout_height="wrap_content"
         android:text="Ver Trabajador"
         android:id="@+id/btnVerTrabajador"
-        app:layout_constraintTop_toBottomOf="@id/btnGuardar"
+        app:layout_constraintTop_toBottomOf="@id/btnGuardarTrabajador"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="50dp"/>
