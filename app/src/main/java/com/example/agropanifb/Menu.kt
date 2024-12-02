@@ -27,17 +27,19 @@ class Menu : AppCompatActivity() {
             }
 
             // Configurar el botón para redirigir a la actividad MenuCosecha
-            val btnCosecha: Button = findViewById(R.id.btncosecha)
-            btnCosecha.setOnClickListener {
+            val btncosecha: Button = findViewById(R.id.btncosecha)
+            btncosecha.setOnClickListener {
                 val intent = Intent(this, MenuCosecha::class.java)
                 startActivity(intent)
+
             }
 
             // Configurar el botón para redirigir a la actividad MenuEmpleados
-            val btnEmpleados: Button = findViewById(R.id.btnempleados)
-            btnEmpleados.setOnClickListener {
+            val btnempleados: Button = findViewById(R.id.btnempleados)
+            btnempleados.setOnClickListener {
                 val intent = Intent(this, MenuTrabajador::class.java)
                 startActivity(intent)
+
             }
 
 

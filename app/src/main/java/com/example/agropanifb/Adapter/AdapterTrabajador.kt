@@ -8,18 +8,21 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.agropanifb.Models.Trabajador
 import com.example.agropanifb.R
 
-class AdapterTrabajador(private var trabajador: ArrayList <Trabajador>):
-    RecyclerView.Adapter<AdapterTrabajador.ViewHolder>(){
-    class ViewHolder (itemView: View): RecyclerView.ViewHolder(itemView){
-        val nombre : TextView = itemView.findViewById(R.id.tvNombre)
-        val apellido : TextView = itemView.findViewById(R.id.tvApellido)
-        val edad : TextView = itemView.findViewById(R.id.tvEdad)
+class AdapterTrabajador(private var trabajador: ArrayList<Trabajador>) :
+    RecyclerView.Adapter<AdapterTrabajador.ViewHolder>() {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val nombre: TextView = itemView.findViewById(R.id.tvNombre)
+        val apellido: TextView = itemView.findViewById(R.id.tvApellido)
+        val edad: TextView = itemView.findViewById(R.id.tvEdad)
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterTrabajador.ViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): AdapterTrabajador.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
-            R.layout.item_trabajadores, parent,false
+            R.layout.item_ver_trabajador, parent, false
         )
         return ViewHolder(view)
     }
@@ -36,6 +39,6 @@ class AdapterTrabajador(private var trabajador: ArrayList <Trabajador>):
     }
 
     override fun getItemCount(): Int {
-        return  trabajador.size
+        return trabajador.size
     }
 }
