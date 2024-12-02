@@ -79,6 +79,12 @@ class Menu : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.item4 -> {
+                    // Navegar a "Salir de la App"
+                    val intent = Intent(this, Salir::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }

@@ -13,9 +13,11 @@
         android:theme="@style/Theme.AgropaniFB"
         tools:targetApi="31">
         <activity
+            android:name=".Salir"
+            android:exported="false" />
+        <activity
             android:name=".RegistroActivity"
             android:exported="true" />
-
         <activity
             android:name=".MenuTrabajador"
             android:exported="false" />
@@ -31,7 +33,6 @@
         <activity
             android:name=".VerTrabajador"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
