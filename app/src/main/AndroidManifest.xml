@@ -13,6 +13,12 @@
         android:theme="@style/Theme.AgropaniFB"
         tools:targetApi="31">
         <activity
+            android:name=".ItemVerTrabajador"
+            android:exported="false" />
+        <activity
+            android:name=".EditarTrabajador"
+            android:exported="false" />
+        <activity
             android:name=".CambiarContrasena"
             android:exported="false" />
         <activity

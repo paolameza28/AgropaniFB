@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/item1"
         android:title="Menu"
+        app:startIconDrawable="@drawable/ic_menu"
         android:enabled="true"
         android:icon="@drawable/ic_android"
     />
     <item
         android:id="@+id/item2"
         android:title="Menu Cosecha"
+        app:startIconDrawable="@drawable/ic_cosecha"
         android:enabled="true"
         android:icon="@drawable/ic_android"
         />
     <item
         android:id="@+id/item3"
         android:title="Menu Trabajadores"
+        app:startIconDrawable="@drawable/ic_trabajador"
         android:enabled="true"
         android:icon="@drawable/ic_android"
         />
     <item
         android:id="@+id/item4"
         android:title="Salir"
+        app:startIconDrawable="@drawable/ic_cerrar_sesion"
         android:enabled="true"
         android:icon="@drawable/ic_android"
         />
