@@ -53,9 +53,15 @@ class MainActivity : AppCompatActivity() {
             signIn(email, password)
         }
 
-        // Programar el clic en "¿No estás registrado? Registrate"
+        // Programar el clic en "¿No estás registrado? Regístrate"
         binding.tvRegistrar.setOnClickListener {
             val intent = Intent(this, RegistroActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Programar el clic en "¿Olvidaste tu contraseña? Recuperar"
+        binding.tvCambiar.setOnClickListener {
+            val intent = Intent(this, RestaurarContrasena::class.java)
             startActivity(intent)
         }
 

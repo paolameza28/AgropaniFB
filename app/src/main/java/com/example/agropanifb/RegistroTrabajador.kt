@@ -65,10 +65,7 @@ class RegistroTrabajador : AppCompatActivity() {
                 binding.etEdadTrabajador.setText("")
                 Snackbar.make(binding.root, "Trabajador Agregado", Snackbar.LENGTH_LONG).show()
             }
-            binding.btnVerTrabajador.setOnClickListener{
-                val intent = Intent(this,VerTrabajador::class.java)
-                startActivity(intent)
-            }
+
 
         }
     }

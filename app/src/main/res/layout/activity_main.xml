@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:layout_margin="50dp"
-    android:id="@+id/main"
-    >
+    android:id="@+id/main">
 
     <TextView
         android:id="@+id/textView"
@@ -72,20 +71,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/tvCambiar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
         android:focusable="true"
-        />
+        android:text="¿Olvidaste tu contraseña? Recuperar"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="Logotipo de la aplicación"
         android:src="@drawable/logoagropani"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRegistrar"
-         />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/tvCambiar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

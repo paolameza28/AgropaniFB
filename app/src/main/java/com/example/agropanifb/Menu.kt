@@ -2,7 +2,9 @@ package com.example.agropanifb
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,8 +18,9 @@ class Menu : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdge() // Si tu versión de Android lo soporta, mantén esta línea
         setContentView(R.layout.activity_menu)
+
         try {
             // Aplicar el listener para manejar los márgenes de las barras del sistema
             ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { view, insets ->
@@ -31,18 +34,16 @@ class Menu : AppCompatActivity() {
             btncosecha.setOnClickListener {
                 val intent = Intent(this, MenuCosecha::class.java)
                 startActivity(intent)
-
-
             }
 
             // Configurar el botón para redirigir a la actividad MenuEmpleados
             val btnempleados: Button = findViewById(R.id.btnEmpleados)
             btnempleados.setOnClickListener {
-                val intent = Intent(this, MenuTrabajador ::class.java)
+                val intent = Intent(this, MenuTrabajador::class.java)
                 startActivity(intent)
-
-
             }
+
+
 
 
         } catch (e: Exception) {
@@ -50,13 +51,13 @@ class Menu : AppCompatActivity() {
             e.printStackTrace() // Imprimir el stack trace en caso de error
             Toast.makeText(this, "Ocurrió un error: ${e.message}", Toast.LENGTH_SHORT).show()
         }
+
         // Aplicar ajustes de EdgeToEdge
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainmenu)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
 
         // Configurar el BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
@@ -91,7 +92,5 @@ class Menu : AppCompatActivity() {
                 else -> false
             }
         }
-
-
     }
 }
